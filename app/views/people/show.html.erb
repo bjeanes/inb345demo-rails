@@ -1,0 +1,38 @@
+<p>
+  <b>First name:</b>
+  <%=h @person.first_name %>
+</p>
+
+<p>
+  <b>Last name:</b>
+  <%=h @person.last_name %>
+</p>
+
+<p>
+  <b>Group:</b>
+  <%=link_to @person.group.name, @person.group %>
+</p>
+
+<p>
+  <b>Post code:</b>
+  <%=h @person.post_code %>
+</p>
+
+<p>
+  <b>Country:</b>
+  <%=h @person.country %>
+</p>
+
+<p>
+  <b>Address:</b>
+  <%=h @person.address %>
+</p>
+
+<p>
+  <b>City:</b>
+  <%=h @person.city %>
+</p>
+
+
+<%= link_to 'Edit', edit_person_path(@person) %> |
+<%= link_to 'Back', people_path %>
