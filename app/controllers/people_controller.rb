@@ -6,8 +6,9 @@ class PeopleController < ApplicationController
 
     respond_to do |format|
       format.html # index.html.erb
-      format.xml  { render :xml => @people }
-      format.plist  { render @people.to_plist }
+      format.xml   { render :xml => @people }
+      format.json   { render :json => @people }
+      format.plist { render :text => @people.to_plist }
     end
   end
 
@@ -19,6 +20,7 @@ class PeopleController < ApplicationController
     respond_to do |format|
       format.html # show.html.erb
       format.xml  { render :xml => @person }
+      format.plist { render :text => @person.to_plist }
     end
   end
 
