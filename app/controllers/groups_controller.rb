@@ -2,7 +2,7 @@ class GroupsController < ApplicationController
   # GET /groups
   # GET /groups.xml
   def index
-    @groups = Group.all
+    @groups = Group.all(:limit => params[:limit])
 
     respond_to do |format|
       format.html # index.html.erb
