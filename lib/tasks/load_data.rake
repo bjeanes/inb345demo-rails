@@ -35,9 +35,10 @@ task :load_data => [:environment] do
   # Personid: integer, first_name: string, last_name: string, group_id: integer, post_code: string, country: string, address: string, city: string, created_at: datetime, updated_at: datetime, latitude: float, longitude: float, image_url: string
   
   times.times do |time|
-    group_id = (times % (time + 1)) + 1
+    group_ids = Group.all.map(&:id)
+    
     puts Person.create!(
-      :group_id => group_id,
+      :group_id => group_ids[rand(group_ids.size)],
       :first_name => Name.first_name,
       :last_name => Name.last_name,
       :post_code => Address.zip_code,
