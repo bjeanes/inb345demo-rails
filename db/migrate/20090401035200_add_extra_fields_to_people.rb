@@ -1,7 +1,7 @@
 class AddExtraFieldsToPeople < ActiveRecord::Migration
   def self.up
-    add_column :people, :latitude, :double
-    add_column :people, :longitude, :double
+    add_column :people, :latitude, :float
+    add_column :people, :longitude, :float
     add_column :people, :image_url, :string
   end
 
