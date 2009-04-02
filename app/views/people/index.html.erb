@@ -15,7 +15,7 @@
   <tr>
     <td><%=h person.first_name %></td>
     <td><%=h person.last_name %></td>
-    <td><%=h person.group %></td>
+    <td><%=link_to h(person.group.to_s), group_path(person.group) rescue nil %></td>
     <td><%=h person.post_code %></td>
     <td><%=h person.country %></td>
     <td><%=h person.address %></td>
