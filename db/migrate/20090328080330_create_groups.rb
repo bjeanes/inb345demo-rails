@@ -1,6 +1,6 @@
 class CreateGroups < ActiveRecord::Migration
   def self.up
-    create_table :groups do |t|
+    create_table :groups, :primary_key => "group_id" do |t|
       t.string :name
       t.string :color
 

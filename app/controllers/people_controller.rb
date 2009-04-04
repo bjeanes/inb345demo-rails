@@ -2,7 +2,8 @@ class PeopleController < ApplicationController
   # GET /people
   # GET /people.xml
   def index
-    @people = Person.all(:limit => params[:limit])
+    @people = params[:search] ? Person.search(params[:search]) : Person
+    @peole = @people.all(:limit => params[:limit])
 
     respond_to do |format|
       format.html # index.html.erb

@@ -44,6 +44,7 @@ task :load_data => [:environment] do
       :post_code => Address.zip_code,
       :country => "United States of America",
       :address => Address.street_address,
+      :state => Address.us_state,
       :city => Address.city,
       :latitude => (rand(180000000000) / 1000000000.0) - 90.0, # valid from -90.0 to 90.0,
       :longitude => (rand(360000000000) / 1000000000.0) - 180.0 # valid from -180.0 to 180.0
