@@ -1,5 +1,5 @@
 desc "Load some fake data into db"
-task :load_data => [:environment] do
+task :load_data => :environment do
   
   require 'faker'
   include Faker
